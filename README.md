@@ -1,12 +1,12 @@
 # My_Py_scripts
 My_Py_scripts from Haifeng
 
-# Usage:
+## BED12_shift.py_Usage:
 ```
 python3 ./BED12_shift.py my_3UTR_12.bed > my_3UTR_12_fine.bed
 ```
 
-# Example:
+## BED12_shift.py_Example:
 
 ```
 cat tmp.txt
@@ -36,5 +36,7 @@ chr9    57531779        57532426        ENSMUST00000000090      0       +       
 ```
 
 
+![avatar](https://github.com/sunhaifeng123/My_Py_scripts/blob/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200301233140.jpg)
+动动小手，丰衣足食
 
 
