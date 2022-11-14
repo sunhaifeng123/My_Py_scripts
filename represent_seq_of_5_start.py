@@ -5,37 +5,39 @@ import argparse
 
 # 读取文件：
 parser = argparse.ArgumentParser()
-parser.add_argument("-i","--input_fasta", help="Input File", type=str)
+parser.add_argument("-i","--input", help="Input File", type=str)
+parser.add_argument("-o","--output", help="Output File", type=str)
 
 args = parser.parse_args()
 
-input_file = args.input_fasta
+input_file = args.input
+output_file = args.output
 
 Input = open(input_file, 'r')
+Output = open(output_file,'w')
 
-rep = "NNN"
+rep = "-------"
 
 # 循环读取：
 for line in Input.readlines():
     line = line.strip('\n')
 
     if rep.startswith(line):
-        print (line + '\t' + rep)
+        Output.write(line + '\t' + rep + '\n')
     else:
         rep = line
-        print (line + '\t' + rep)
+        Output.write(line + '\t' + rep + '\n')
 
-        
-# Example:
-# input (need to be sorted):
-## AAABBBCCC
-## AAABBB
-## AAA
-## BBB
-## CCC
-# onput:
-## AAABBBCCC       AAABBBCCC
-## AAABBB  AAABBBCCC
-## AAA     AAABBBCCC
-## BBB     BBB
-## CCC     CCC
+## Example-Input: (need to be sorted):
+# AAABBBCCC
+# AAABBB
+# AAA
+# BBB
+# CCC
+
+## Example-Onput:
+# AAABBBCCC       AAABBBCCC
+# AAABBB  AAABBBCCC
+# AAA     AAABBBCCC
+# BBB     BBB
+# CCC     CCC
