@@ -29,6 +29,7 @@ for line in Input.readlines():
         Output.write(line + '\t' + rep + '\n')
 
 ## Example-Input: (need to be sorted):
+## sort in shell: sort -r in.txt > in.sorted.txt
 # AAABBBCCC
 # AAABBB
 # AAA
